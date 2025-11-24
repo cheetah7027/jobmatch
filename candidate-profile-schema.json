@@ -1,0 +1,185 @@
+{
+    "candidateProfile": {
+        "header": {
+            "profilePhoto": {
+                "type": "Image",
+                "value": "https://example.com/photo.jpg",
+                "uiHint": "CircularAvatar",
+                "size": "large"
+            },
+            "fullName": {
+                "type": "Text",
+                "value": "Sarah Chen",
+                "uiHint": "Heading1",
+                "style": "bold"
+            },
+            "jobTitle": {
+                "type": "Text",
+                "value": "Senior React Developer",
+                "uiHint": "Heading2",
+                "style": "medium"
+            },
+            "matchScore": {
+                "type": "Number",
+                "value": 92,
+                "uiHint": "Badge",
+                "color": "success",
+                "icon": "Star",
+                "label": "92% Match"
+            }
+        },
+        "quickInfo": {
+            "experienceLevel": {
+                "type": "Text",
+                "value": "5 years",
+                "uiHint": "Chip",
+                "icon": "Briefcase",
+                "color": "primary"
+            },
+            "location": {
+                "type": "Text",
+                "value": "San Francisco, CA",
+                "uiHint": "Chip",
+                "icon": "MapPin",
+                "color": "neutral"
+            },
+            "relocationPreference": {
+                "type": "Text",
+                "value": "Open to relocation",
+                "uiHint": "Chip",
+                "icon": "Globe",
+                "color": "info"
+            },
+            "workStyle": {
+                "type": "Text",
+                "value": "Remote",
+                "uiHint": "Chip",
+                "icon": "Home",
+                "color": "success"
+            },
+            "availability": {
+                "type": "Text",
+                "value": "Immediate",
+                "uiHint": "Chip",
+                "icon": "Calendar",
+                "color": "warning"
+            }
+        },
+        "compensation": {
+            "expectedSalary": {
+                "type": "Text",
+                "value": "$120k - $150k",
+                "uiHint": "Text",
+                "icon": "DollarSign",
+                "style": "semibold"
+            }
+        },
+        "skills": {
+            "type": "Array",
+            "value": [
+                "React",
+                "TypeScript",
+                "Node.js",
+                "AWS",
+                "GraphQL",
+                "Docker"
+            ],
+            "uiHint": "ChipGroup",
+            "color": "accent",
+            "maxVisible": 6,
+            "expandable": true
+        },
+        "bio": {
+            "type": "Text",
+            "value": "Passionate about building scalable UI systems and accessible web applications. 5+ years shipping production-grade React apps.",
+            "uiHint": "Text",
+            "maxLength": 200,
+            "style": "regular"
+        },
+        "experience": {
+            "type": "Array",
+            "uiHint": "List",
+            "value": [
+                {
+                    "company": "TechCorp Inc.",
+                    "role": "Senior Frontend Developer",
+                    "duration": "2021 - Present",
+                    "uiHint": "ListItem",
+                    "icon": "Building"
+                },
+                {
+                    "company": "StartupXYZ",
+                    "role": "React Developer",
+                    "duration": "2019 - 2021",
+                    "uiHint": "ListItem",
+                    "icon": "Building"
+                }
+            ]
+        },
+        "achievements": {
+            "type": "Array",
+            "uiHint": "BadgeList",
+            "optional": true,
+            "value": [
+                {
+                    "title": "AWS Certified Solutions Architect",
+                    "icon": "Award",
+                    "color": "gold"
+                },
+                {
+                    "title": "Led team of 5 developers",
+                    "icon": "Users",
+                    "color": "blue"
+                }
+            ]
+        },
+        "actions": {
+            "resume": {
+                "type": "Button",
+                "label": "Download Resume",
+                "icon": "Download",
+                "variant": "outline",
+                "action": "downloadResume",
+                "url": "https://example.com/resume.pdf"
+            },
+            "portfolio": {
+                "type": "Button",
+                "label": "View Portfolio",
+                "icon": "ExternalLink",
+                "variant": "link",
+                "action": "openLink",
+                "url": "https://portfolio.example.com",
+                "optional": true
+            },
+            "contact": {
+                "type": "Button",
+                "label": "Contact Candidate",
+                "icon": "MessageSquare",
+                "variant": "primary",
+                "action": "initiateContact"
+            },
+            "shortlist": {
+                "type": "Button",
+                "label": "Shortlist",
+                "icon": "Bookmark",
+                "variant": "secondary",
+                "action": "addToShortlist"
+            }
+        }
+    },
+    "uiLayout": {
+        "sections": [
+            "header",
+            "quickInfo",
+            "compensation",
+            "skills",
+            "bio",
+            "experience",
+            "achievements",
+            "actions"
+        ],
+        "spacing": "compact",
+        "scannable": true,
+        "mobileOptimized": true
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  
+  <!-- Primary Meta Tags -->
+  <title>JobMatch - Swipe Your Next Job</title>
+  <meta name="title" content="JobMatch - Swipe Your Next Job">
+  <meta name="description" content="Tinder-style job searching app. Swipe right on jobs you love, left on ones you don't. Match with employers instantly.">
+  
+  <!-- PWA Meta Tags -->
+  <meta name="application-name" content="JobMatch">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="JobMatch">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#2E6CE6">
+  
+  <!-- Manifest -->
+  <link rel="manifest" href="/public/manifest.json">
+  
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="/icons/icon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-192x192.png">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jobmatch.app/">
+  <meta property="og:title" content="JobMatch - Swipe Your Next Job">
+  <meta property="og:description" content="Tinder-style job searching app. Swipe right on jobs you love, left on ones you don't.">
+  <meta property="og:image" content="/icons/icon-512x512.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://jobmatch.app/">
+  <meta property="twitter:title" content="JobMatch - Swipe Your Next Job">
+  <meta property="twitter:description" content="Tinder-style job searching app. Swipe right on jobs you love, left on ones you don't.">
+  <meta property="twitter:image" content="/icons/icon-512x512.png">
+  
+  <!-- Prevent zoom on input focus (iOS) -->
+  <style>
+    input, select, textarea {
+      font-size: 16px !important;
+    }
+    
+    /* Prevent pull-to-refresh on mobile */
+    body {
+      overscroll-behavior-y: contain;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/App.tsx"></script>
+  
+  <!-- Register Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/public/sw.js')
+          .then(registration => {
+            console.log('SW registered:', registration);
+          })
+          .catch(err => {
+            console.log('SW registration failed:', err);
+          });
+      });
+    }
+  </script>
+</body>
+</html>
